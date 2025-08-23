@@ -1,0 +1,18 @@
+.btn {
+    border: none;
+    padding : 14px 40px ;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.btn-green {
+    color : rgb(1, 78, 1);
+    background-color: rgb(140, 226, 140);
+    border : 1px solid  rgb(1, 78, 1);
+}
+
+.btn-red {
+    color : rgb(78, 1, 1);
+    background-color: rgb(226, 151, 140);
+    border : 1px solid  rgb(78, 1, 1);
+}
