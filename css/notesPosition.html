@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning & Layout Theory</title>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #64748b;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            
+            --border-radius: 0.5rem;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        .section {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .subsection-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+            color: var(--text-dark);
+        }
+
+        .concept-box {
+            background: var(--bg-light);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+        }
+
+        .concept-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+
+        .key-points {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .key-points h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .comparison-item {
+            background: var(--bg-white);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+        }
+
+        .comparison-item h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .visual-example {
+            background: #f8fafc;
+            border: 2px dashed var(--border-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            text-align: center;
+            font-style: italic;
+            color: var(--text-medium);
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border: 2px solid var(--warning-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .warning-box h4 {
+            color: #92400e;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .best-practice {
+            background: #ecfdf5;
+            border: 2px solid var(--success-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .best-practice h4 {
+            color: #065f46;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        ul, ol {
+            padding-left: var(--spacing-xl);
+            margin: var(--spacing-sm) 0;
+        }
+
+        li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .flow-diagram {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            text-align: center;
+        }
+
+        .flow-step {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin: 0 var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        .arrow {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Position Property Section -->
+        <section class="section">
+            <h1 class="section-title">1. CSS Position Property Theory</h1>
+            
+            <div class="key-points">
+                <h4>Core Concept</h4>
+                <p>The <span class="highlight">position</span> property determines how an element is positioned in the document flow and how its position is calculated relative to other elements or the viewport.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>position: static (Default)</h4>
+                    <p><strong>Behavior:</strong> Normal document flow</p>
+                    <p><strong>Position Properties:</strong> top, right, bottom, left have NO effect</p>
+                    <p><strong>Use Case:</strong> Default behavior, rarely explicitly set</p>
+                    <div class="code-block">
+.element {
+    position: static;
+    /* top, left properties ignored */
+    top: 100px; /* NO EFFECT */
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>position: relative</h4>
+                    <p><strong>Behavior:</strong> Positioned relative to its normal position</p>
+                    <p><strong>Document Flow:</strong> Still occupies original space</p>
+                    <p><strong>Position Properties:</strong> top, right, bottom, left work</p>
+                    <div class="code-block">
+.element {
+    position: relative;
+    top: 20px;    /* Moves 20px down */
+    left: 10px;   /* Moves 10px right */
+}
+/* Original space still reserved */
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>position: absolute</h4>
+                    <p><strong>Behavior:</strong> Positioned relative to nearest positioned ancestor</p>
+                    <p><strong>Document Flow:</strong> Removed from normal flow</p>
+                    <p><strong>Containing Block:</strong> Nearest positioned parent or viewport</p>
+                    <div class="code-block">
+.parent {
+    position: relative; /* Creates positioning context */
+}
+.child {
+    position: absolute;
+    top: 0;     /* Relative to parent */
+    right: 0;   /* Not to viewport */
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>position: fixed</h4>
+                    <p><strong>Behavior:</strong> Positioned relative to viewport</p>
+                    <p><strong>Document Flow:</strong> Removed from normal flow</p>
+                    <p><strong>Scrolling:</strong> Stays in place when page scrolls</p>
+                    <div class="code-block">
+.navbar {
+    position: fixed;
+    top: 0;        /* Always at top */
+    left: 0;       /* Always at left */
+    width: 100%;   /* Full width */
+    z-index: 1000; /* Above other content */
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>position: sticky</h4>
+                    <p><strong>Behavior:</strong> Hybrid of relative and fixed</p>
+                    <p><strong>Threshold:</strong> Becomes fixed when scroll threshold is met</p>
+                    <p><strong>Containing Block:</strong> Nearest scrolling ancestor</p>
+                    <div class="code-block">
+.sticky-header {
+    position: sticky;
+    top: 0;  /* Becomes fixed when 0px from top */
+}
+/* Acts relative until threshold, then fixed */
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <div class="concept-title">Positioning Context Theory</div>
+                <p>Understanding the <span class="highlight">"containing block"</span> is crucial:</p>
+                <ul>
+                    <li><strong>Static/Relative:</strong> Containing block = parent element's content area</li>
+                    <li><strong>Absolute:</strong> Containing block = nearest positioned ancestor (relative, absolute, fixed, sticky)</li>
+                    <li><strong>Fixed:</strong> Containing block = viewport (usually)</li>
+                    <li><strong>Sticky:</strong> Containing block = nearest scrolling ancestor</li>
+                </ul>
+            </div>
+
+            <div class="flow-diagram">
+                <div class="concept-title">Position Resolution Flow</div>
+                <div style="margin: var(--spacing-md) 0;">
+                    <span class="flow-step">Element Positioned</span>
+                    <span class="arrow">→</span>
+                    <span class="flow-step">Find Containing Block</span>
+                    <span class="arrow">→</span>
+                    <span class="flow-step">Calculate Offset</span>
+                    <span class="arrow">→</span>
+                    <span class="flow-step">Apply Position</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Z-Index and Stacking Contexts -->
+        <section class="section">
+            <h1 class="section-title">2. Z-Index and Stacking Contexts Theory</h1>
+
+            <div class="key-points">
+                <h4>Fundamental Concept</h4>
+                <p>Z-index controls the <span class="highlight">stacking order</span> of elements along the Z-axis (coming toward/away from the viewer). However, it only works on <strong>positioned elements</strong> and creates complex <strong>stacking contexts</strong>.</p>
+            </div>
+
+            <h3 class="subsection-title">Stacking Context Rules</h3>
+            
+            <div class="concept-box">
+                <div class="concept-title">What Creates a Stacking Context?</div>
+                <ol>
+                    <li><strong>Root element</strong> (html)</li>
+                    <li><strong>Positioned elements</strong> with z-index ≠ auto</li>
+                    <li><strong>Flex/Grid items</strong> with z-index ≠ auto</li>
+                    <li><strong>Elements with opacity</strong> < 1</li>
+                    <li><strong>Elements with transform</strong> ≠ none</li>
+                    <li><strong>Elements with filter</strong> ≠ none</li>
+                    <li><strong>Elements with isolation: isolate</strong></li>
+                    <li><strong>Elements with mix-blend-mode</strong> ≠ normal</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Common Z-Index Gotcha</h4>
+                <p>Z-index values are only compared <strong>within the same stacking context</strong>. A child element can never appear above its parent's stacking context, regardless of z-index value.</p>
+            </div>
+
+            <div class="code-block">
+/* Example of Stacking Context Trap */
+.parent {
+    position: relative;
+    z-index: 1;  /* Creates stacking context */
+}
+
+.child {
+    position: absolute;
+    z-index: 9999;  /* High value, but still behind .other */
+}
+
+.other {
+    position: relative;
+    z-index: 2;  /* Higher than parent, so appears above entire parent context */
+}
+
+/* .child can NEVER appear above .other, regardless of z-index value */
+            </div>
+
+            <h3 class="subsection-title">Stacking Order (Bottom to Top)</h3>
+            <div class="flow-diagram">
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <ol>
+                        <li><strong>Background/Borders</strong> of stacking context</li>
+                        <li><strong>Negative z-index</strong> positioned elements</li>
+                        <li><strong>Block-level boxes</strong> in normal flow</li>
+                        <li><strong>Floated elements</strong></li>
+                        <li><strong>Inline elements</strong> in normal flow</li>
+                        <li><strong>z-index: 0</strong> positioned elements</li>
+                        <li><strong>Positive z-index</strong> positioned elements</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="best-practice">
+                <h4>✅ Z-Index Best Practices</h4>
+                <ul>
+                    <li>Use a <strong>z-index scale</strong> (e.g., 10, 20, 30) for easy insertion</li>
+                    <li>Create <strong>CSS custom properties</strong> for z-index values</li>
+                    <li>Document your <strong>stacking context hierarchy</strong></li>
+                    <li>Avoid z-index wars (9999, 99999, etc.)</li>
+                    <li>Use <strong>isolation: isolate</strong> to create contexts without positioning</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+/* Z-Index Management System */
+:root {
+    --z-dropdown: 100;
+    --z-modal: 200;
+    --z-notification: 300;
+    --z-tooltip: 400;
+}
+
+.dropdown {
+    z-index: var(--z-dropdown);
+}
+
+.modal {
+    z-index: var(--z-modal);
+}
+
+/* Create stacking context without positioning */
+.isolate {
+    isolation: isolate;
+}
+            </div>
+        </section>
+
+        <!-- Overflow and Clipping -->
+        <section class="section">
+            <h1 class="section-title">3. Overflow and Clipping Theory</h1>
+
+            <div class="key-points">
+                <h4>Core Concept</h4>
+                <p>The <span class="highlight">overflow</span> property controls what happens when content is too large to fit in its container. It affects the <strong>formatting context</strong> and can create <strong>new stacking contexts</strong>.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>overflow: visible (Default)</h4>
+                    <p><strong>Behavior:</strong> Content flows outside container</p>
+                    <p><strong>Clipping:</strong> No clipping occurs</p>
+                    <p><strong>Scrollbars:</strong> None</p>
+                    <div class="visual-example">
+                        Content can extend beyond container boundaries
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>overflow: hidden</h4>
+                    <p><strong>Behavior:</strong> Content is clipped at container edge</p>
+                    <p><strong>Side Effect:</strong> Creates new Block Formatting Context (BFC)</p>
+                    <p><strong>Use Case:</strong> Clearing floats, preventing layout shifts</p>
+                    <div class="visual-example">
+                        Content cut off at container edge
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>overflow: scroll</h4>
+                    <p><strong>Behavior:</strong> Always shows scrollbars</p>
+                    <p><strong>Scrollbars:</strong> Both horizontal and vertical (even if not needed)</p>
+                    <p><strong>Use Case:</strong> Consistent UI with always-visible scrollbars</p>
+                    <div class="visual-example">
+                        Scrollbars always present
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>overflow: auto</h4>
+                    <p><strong>Behavior:</strong> Scrollbars appear only when needed</p>
+                    <p><strong>Smart Scrolling:</strong> Browser decides when to show scrollbars</p>
+                    <p><strong>Use Case:</strong> Most common choice for scrollable containers</p>
+                    <div class="visual-example">
+                        Scrollbars appear when content overflows
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Directional Overflow Control</h3>
+            <div class="code-block">
+/* Control overflow in specific directions */
+.container {
+    overflow-x: hidden;  /* Hide horizontal overflow */
+    overflow-y: auto;    /* Allow vertical scrolling */
+}
+
+/* Shorthand equivalent */
+.container {
+    overflow: hidden auto; /* x-axis y-axis */
+}
+            </div>
+
+            <div class="concept-box">
+                <div class="concept-title">Block Formatting Context (BFC) Creation</div>
+                <p>Elements with <code>overflow</code> other than <code>visible</code> create a new BFC, which has important effects:</p>
+                <ul>
+                    <li><strong>Contains floats</strong> - floated children won't escape</li>
+                    <li><strong>Prevents margin collapse</strong> with children</li>
+                    <li><strong>Excludes external floats</strong> from flowing inside</li>
+                    <li><strong>Creates independent formatting context</strong></li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Overflow Gotchas</h4>
+                <ul>
+                    <li><strong>Performance:</strong> <code>overflow: hidden</code> can trigger repaints</li>
+                    <li><strong>Accessibility:</strong> Hidden content may still be accessible to screen readers</li>
+                    <li><strong>Touch devices:</strong> <code>overflow: scroll</code> may not show scrollbars until scrolling</li>
+                    <li><strong>Text overflow:</strong> Use <code>text-overflow: ellipsis</code> with <code>overflow: hidden</code></li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">Advanced Clipping</h3>
+            <div class="code-block">
+/* CSS Clipping */
+.clip-path {
+    clip-path: circle(50%);           /* Circular clipping */
+    clip-path: polygon(0 0, 100% 0, 50% 100%); /* Triangle */
+    clip-path: inset(10px 20px 30px 40px);     /* Rectangle inset */
+}
+
+/* Text overflow handling */
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Multi-line text truncation */
+.text-truncate-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+            </div>
+        </section>
+
+        <!-- Floats Section -->
+        <section class="section">
+            <h1 class="section-title">4. Floats Theory (Legacy but Important)</h1>
+
+            <div class="key-points">
+                <h4>Historical Context</h4>
+                <p>Floats were originally designed for <span class="highlight">text wrapping around images</span>, but became the primary layout method before Flexbox and Grid. Understanding floats helps with legacy code and certain text layout scenarios.</p>
+            </div>
+
+            <h3 class="subsection-title">Float Behavior Theory</h3>
+
+            <div class="concept-box">
+                <div class="concept-title">How Floats Work</div>
+                <ol>
+                    <li><strong>Element Removal:</strong> Floated element is removed from normal document flow</li>
+                    <li><strong>Horizontal Shift:</strong> Element shifts left or right until it touches container edge or another float</li>
+                    <li><strong>Text Flow:</strong> Surrounding text and inline elements wrap around the float</li>
+                    <li><strong>Block Elements:</strong> Block elements ignore the float (but their content respects it)</li>
+                </ol>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>float: left</h4>
+                    <p>Element floats to the left side of its containing block</p>
+                    <div class="code-block">
+.float-left {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>float: right</h4>
+                    <p>Element floats to the right side of its containing block</p>
+                    <div class="code-block">
+.float-right {
+    float: right;
+    width: 200px;
+    margin-left: 20px;
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>float: none (Default)</h4>
+                    <p>Element follows normal document flow</p>
+                    <div class="code-block">
+.no-float {
+    float: none; /* Default value */
+}
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Float Clearing Theory</h3>
+
+            <div class="concept-box">
+                <div class="concept-title">The Float Collapse Problem</div>
+                <p>When all children of a container are floated, the container <span class="highlight">collapses to zero height</span> because floated elements don't contribute to their parent's height calculation.</p>
+            </div>
+
+            <div class="code-block">
+/* The Problem */
+.container {
+    border: 1px solid red;
+    /* Height collapses to 0 if all children are floated */
+}
+
+.float-child {
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>Clearfix Method (Legacy)</h4>
+                    <div class="code-block">
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>Overflow Method</h4>
+                    <div class="code-block">
+.container {
+    overflow: hidden;
+    /* Creates BFC, contains floats */
+}
+                    </div>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>Modern Approach</h4>
+                    <div class="code-block">
+.container {
+    display: flow-root;
+    /* Modern BFC creation */
+}
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <div class="concept-title">Clear Property Theory</div>
+                <p>The <code>clear</code> property prevents elements from appearing next to floated elements:</p>
+                <ul>
+                    <li><strong>clear: left</strong> - No left-floated elements allowed on the left</li>
+                    <li><strong>clear: right</strong> - No right-floated elements allowed on the right</li>
+                    <li><strong>clear: both</strong> - No floated elements on either side</li>
+                    <li><strong>clear: none</strong> - Default, allows floated elements on both sides</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Why Floats Are Legacy</h4>
+                <ul>
+                    <li><strong>Fragile:</strong> Easy to break layouts with small changes</li>
+                    <li><strong>Clearfix Required:</strong> Need extra CSS to contain floated children</li>
+                    <li><strong>Limited Control:</strong> Difficult to achieve complex layouts</li>
+                    <li><strong>Source Order Dependent:</strong> HTML order affects visual layout</li>
+                    <li><strong>Modern Alternatives:</strong> Flexbox and Grid are more powerful and predictable</li>
+                </ul>
+            </div>
+
+            <div class="best-practice">
+                <h4>✅ When to Still Use Floats</h4>
+                <ul>
+                    <li><strong>Text Wrapping:</strong> Around images in articles (original purpose)</li>
+                    <li><strong>Legacy Support:</strong> When supporting very old browsers</li>
+                    <li><strong>Drop Caps:</strong> Large first letters in paragraphs</li>
+                    <li><strong>Magazine-style Layouts:</strong> Text flowing around irregular shapes</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+/* Modern text wrapping example */
+.article-image {
+    float: left;
+    width: 200px;
+    height: 150px;
+    margin: 0 20px 10px 0;
+    shape-outside: circle(50%); /* Modern enhancement */
+}
+
+.article-text {
+    /* Text naturally wraps around floated image */
+}
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="section">
+            <h1 class="section-title">5. Integration & Modern Best Practices</h1>
+
+            <div class="concept-box">
+                <div class="concept-title">Positioning in Modern CSS</div>
+                <p>Today's layout systems work together:</p>
+                <ul>
+                    <li><strong>Grid/Flexbox:</strong> Primary layout systems</li>
+                    <li><strong>Position:</strong> For overlays, fixed headers, and precise positioning</li>
+                    <li><strong>Z-index:</strong> For layering positioned elements</li>
+                    <li><strong>Overflow:</strong> For scrollable areas and BFC creation</li>
+                    <li><strong>Floats:</strong> Primarily for text wrapping around content</li>
+                </ul>
+            </div>
+
+            <div class="flow-diagram">
+                <div class="concept-title">Layout Decision Flow</div>
+                <div style="text-align: left; max-width: 600px; margin: var(--spacing-md) auto 0;">
+                    <p><strong>Grid:</strong> For 2D layouts, page-level structure</p>
+                    <p><strong>Flexbox:</strong> For 1D layouts, component alignment</p>
+                    <p><strong>Position:</strong> For overlays, tooltips, fixed elements</p>
+                    <p><strong>Float:</strong> For text wrapping scenarios only</p>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h4>Key Takeaways</h4>
+                <ul>
+                    <li><strong>Document Flow:</strong> Understanding normal flow is fundamental to all positioning</li>
+                    <li><strong>Stacking Contexts:</strong> They're everywhere - transforms, opacity, positioned elements</li>
+                    <li><strong>Containing Blocks:</strong> Different positioning values use different reference points</li>
+                    <li><strong>BFC Creation:</strong> Overflow, display values, and positioning create formatting contexts</li>
+                    <li><strong>Modern CSS:</strong> Use the right tool for each job - Grid, Flexbox, and Position complement each other</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
