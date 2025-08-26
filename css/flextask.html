@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+    <title>Document</title>
+    <style>
+        * {
+            margin : 0 ;
+            padding : 0 ;
+            box-sizing: border;
+            font-family: "Inter";
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            gap : 6px
+        }
+
+        #city {
+            font-weight: 700;
+        }
+
+        #state {
+            color  : lightgray
+        }
+
+        i {
+            color : rgb(130, 90, 210)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="location">
+          <p id="city">Gurugram</p>
+          <p id="state">Haryana</p>
+        </div>
+    </div>
+</body>
+</html>
