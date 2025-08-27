@@ -25,11 +25,14 @@
         height: 100vh;
     }
  .container {
-    height: 300px;
+   
     width: 350px;
     border : 1px solid oklch(0.877 0 0) ;
     border-radius: 20px;
     padding : 26px;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
  }
     .heading {
         font-size: 16px;
@@ -49,6 +52,13 @@
     .pic {
         width : 60px
     }
+
+    .first_group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap : 10px
+    }
 </style>
 </head>
 <body>
@@ -58,6 +68,42 @@
           <p class="desc">Invite your team members to collaborate.</p> 
         </div>
         <div class="group_users">
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Sofia Davis</p>
+                        <p class="mail">m@example.com</p>
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Sofia Davis</p>
+                        <p class="mail">m@example.com</p>
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Sofia Davis</p>
+                        <p class="mail">m@example.com</p>
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
             <div class="first_group">
                 <div class="profile">
                     <div class="avatar">
