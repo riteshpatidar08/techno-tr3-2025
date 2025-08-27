@@ -40,6 +40,15 @@
         font-size: 14px;
         color : oklch(0.556 0 0)
     }
+    .profile {
+        display: flex;
+        gap : 10px ;
+        align-items: center;
+    }
+
+    .pic {
+        width : 60px
+    }
 </style>
 </head>
 <body>
@@ -49,16 +58,19 @@
           <p class="desc">Invite your team members to collaborate.</p> 
         </div>
         <div class="group_users">
-            <div class="profile">
-                <div class="avatar">
-                    <img src="https://ui.shadcn.com/avatars/01.png">
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Sofia Davis</p>
+                        <p class="mail">m@example.com</p>
+                    </div>
                 </div>
-                <div class="intro">
-                    <p class="name">Sofia Davis</p>
-                    <p class="mail">m@example.com</p>
-                </div>
+                <div class="tag">Owner</div>
             </div>
-            <div class="tag">Owner</div>
+        
         </div>
     </div>
 </body>
