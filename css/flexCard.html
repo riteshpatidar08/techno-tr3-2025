@@ -17,9 +17,37 @@
         box-sizing: border-box;
         font-family: "Geist", sans-serif;;
     }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+ .container {
+    height: 300px;
+    width: 350px;
+    border : 1px solid oklch(0.877 0 0) ;
+    border-radius: 20px;
+ }
+    .heading {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .desc {
+        font-size: 14px;
+        color : oklch(0.556 0 0)
+    }
 </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="group_text">
+           <h4 class="heading">Team Members</h4>
+          <p class="desc">Invite your team members to collaborate.</p> 
+        </div>
+        <div class="group_users"></div>
+    </div>
 </body>
 </html>
