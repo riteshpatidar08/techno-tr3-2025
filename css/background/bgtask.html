@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Geist";
+      }
+
+  
+     
+
+      .hero {
+        height: 800px;
+        background-image: url('https://www.kainskep.com/blogs/team.jpg');
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        z-index: -10;
+      }
+
+      a {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Geist';
+      }
+
+      nav {
+        padding: 15px;
+        display: flex;
+        position: relative;
+        z-index : 100;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .content {
+        font-size: 70px;
+        font-weight: 800;
+        color : white ;
+        position: relative;
+        z-index: 1000;
+        width: 800px;
+      }
+
+      .content:hover{
+        font-size: 80px;
+        transform: translate(100px ,40px);
+        transform: rotate(360deg);
+        color : rgb(94, 92, 92) ;
+        transition: all 1s ease-in .5s;
+      }
+
+       .overlay {
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.722);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+
+      a {
+        cursor: pointer;
+        
+      }
+
+      a:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        transition: all .2s  ease-in .2s;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <a>Home</a>
+          <a>Blogs</a>
+          <a>Reference</a>
+          <a>About</a>
+        </nav>
+      </header>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            The Best offer on the market for you business.
+        </div>
+    </div>
+  
+  </body>
+</html>
