@@ -7,10 +7,13 @@
     <title>Document</title>
     <style>
       body {
-        background-color:hsla(227,0%,0%,1);
-        background-image:
-        radial-gradient(at 40% 20%, hsla(24,0%,2%,1) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, hsla(235,87%,23%,1) 0px, transparent 50%);
+        background-color: hsla(227, 0%, 0%, 1);
+        background-image: radial-gradient(
+            at 40% 20%,
+            hsla(24, 0%, 2%, 1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(at 0% 0%, hsla(235, 87%, 23%, 1) 0px, transparent 50%);
 
         display: flex;
         justify-content: center;
@@ -26,12 +29,24 @@
           rgba(131, 131, 222, 1) 100%,
           rgba(128, 0, 255, 0.59) 87%
         );
-        
+
         width: 150px;
         height: 150px;
         border-radius: 10px;
+        /*
+        animation: name duration timing-function delay iteration-count ; */
+        animation: slide 5s ease 1s infinite;
       }
 
+      @keyframes slide {
+        0%,
+        100% {
+          transform: translate(0);
+        }
+        50% {
+          transform: translateY(-350px) translateX(200px) rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body>

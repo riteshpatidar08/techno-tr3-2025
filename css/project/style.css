@@ -1,0 +1,13 @@
+/* variables */
+
+:root {
+  --bg-white: #ffff;
+  --bg-light-gray: #d1d5db;
+  --bg-dark: #1e1e20;
+  --dg-dark-primary: #00000080;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-dark);
+}
