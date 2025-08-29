@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <style>
+      * {
+        margin : 0 ;
+        padding : 0 ;
+        box-sizing: border-box;
+      }
       a {
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
+        font-family: "Geist";
       }
+
       .hero {
-        height: 1000px;
+        height: 800px;
         background-image: url('https://www.kainskep.com/blogs/team.jpg');
         background-size: cover;
         position: absolute;
@@ -19,17 +29,27 @@
         top: 0;
         z-index: -10;
       }
+
+      nav{
+        padding : 10px;
+        display: flex;
+        gap : 10px
+      }
+   
+
+    
     </style>
   </head>
   <body>
     <header>
       <nav>
         <a>Home</a>
-        <a>Home</a>
-        <a>Home</a>
-        <a>Home</a>
+        <a>Blogs</a>
+        <a>Reference</a>
+        <a>About</a>
       </nav>
     </header>
     <div class="hero"></div>
+    <div class="overlay"></div>
   </body>
 </html>
