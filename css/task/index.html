@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin : 0 ;
+            padding : 0 ;
+            box-sizing: border-box;
+            font-family: "Geist";
+        }
+        body {
+            padding : 0px 60px;
+        }
       .pattern {
         background-color: #182235;
+        border-radius: 6px;
         background-image: linear-gradient(
             30deg,
             #5ebb79 12%,
@@ -59,15 +72,79 @@
         background-size: 74px 130px;
         height: 700px;
         margin: 200px 0;
+        position: relative;
+      }
+
+      .first_card {
+        background-color: rgb(255, 255, 255, 0.7);
+        backdrop-filter: blur(13px) ;
+        width: 350px;
+        display: flex ;
+       justify-content: space-between;
+        align-items: center;
+        gap  : 20px ;
+        border-radius: 2px;
+        padding: 15px;
+        position: absolute;
+        left: 100px;
+        top: -30px;
+      }
+
+      .dollar-icon {
+        background-color:   #81e99e;
+        border-radius: 50%;
+        display: inline-block;
+        height: 80px;
+        padding : 6px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : #5ebb79
+      }
+
+     .budget__text{
+        display : flex ;
+        flex-direction: column;
+        gap : 15px;
+      }
+      .budget__text-title {
+        font-weight: 500;
+        font-size: 18px;
+        color : #5c5c5c
+      }
+      .budget__text-price {
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      span {
+        color :  rgba(94, 187, 121);
+      }
+      .budget__text-compare {
+        color : #5c5c5c;
+        font-size: 14px;
+        font-weight: 500;
       }
     </style>
   </head>
   <body>
-    <div class="pattern"></div>
+    <div class="pattern">
+      <div class="first_card">
+        <div class="dollar-icon">
+            <img src="./dollar-circle-svgrepo-com (2).svg" width="60"/>
+        </div>
+        <div class="budget__text">
+          <p class="budget__text-title">Global Budget</p>
+          <p class="budget__text-price">$ 25,370</p>
+          <p class="budget__text-compare">
+            <span>18%</span>   higher vs previous month
+          </p>
+        </div>
+      </div>
+      <div class="second_card"></div>
+      <div class="third_card"></div>
+      <div class="fourth_card"></div>
+    </div>
   </body>
 </html>
-
-
-//blur
-background-color : rgb(255,255,255,.5)
-backdrop-filter : blur(10px)
