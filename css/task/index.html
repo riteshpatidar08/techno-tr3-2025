@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin : 0 ;
-            padding : 0 ;
-            box-sizing: border-box;
-            font-family: "Geist";
-        }
-        body {
-            padding : 0px 60px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Geist';
+      }
+      body {
+        padding: 0px 60px;
+      }
       .pattern {
         background-color: #182235;
         border-radius: 6px;
@@ -77,12 +80,12 @@
 
       .first_card {
         background-color: rgb(255, 255, 255, 0.7);
-        backdrop-filter: blur(13px) ;
+        backdrop-filter: blur(13px);
         width: 350px;
-        display: flex ;
-       justify-content: space-between;
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        gap  : 20px ;
+        gap: 20px;
         border-radius: 2px;
         padding: 15px;
         position: absolute;
@@ -91,40 +94,57 @@
       }
 
       .dollar-icon {
-        background-color:   #81e99e;
+        background-color: #81e99e;
         border-radius: 50%;
         display: inline-block;
         height: 80px;
-        padding : 6px;
+        padding: 6px;
         width: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color : #5ebb79
+        color: #5ebb79;
       }
 
-     .budget__text{
-        display : flex ;
+      .first_card:hover{
+        transform: scale(1.1) translateX(30px);
+        cursor: pointer;
+        transition: all 1s ease ;
+      }
+
+      .budget__text {
+        display: flex;
         flex-direction: column;
-        gap : 15px;
+        gap: 14px;
       }
       .budget__text-title {
         font-weight: 500;
         font-size: 18px;
-        color : #5c5c5c
+        color: #5c5c5c;
       }
       .budget__text-price {
         font-weight: bold;
-        font-size: 22px;
+        font-size: 24px;
       }
 
-      span {
-        color :  rgba(94, 187, 121);
+     .budget__text-span {
+        color: rgba(94, 187, 121);
       }
       .budget__text-compare {
-        color : #5c5c5c;
+        color: #5c5c5c;
         font-size: 14px;
         font-weight: 500;
+      }
+
+      .second_card {
+        background-color: rgb(255, 255, 255, 0.7);
+        backdrop-filter: blur(13px);
+        position: absolute;
+        width: 350px;
+        height: 450px;
+        right: 20px;
+        top: -150px;
+        border-radius: 4px;
       }
     </style>
   </head>
@@ -132,17 +152,21 @@
     <div class="pattern">
       <div class="first_card">
         <div class="dollar-icon">
-            <img src="./dollar-circle-svgrepo-com (2).svg" width="60"/>
+          <img src="./dollar-circle-svgrepo-com (2).svg" width="60" />
         </div>
         <div class="budget__text">
           <p class="budget__text-title">Global Budget</p>
           <p class="budget__text-price">$ 25,370</p>
           <p class="budget__text-compare">
-            <span>18%</span>   higher vs previous month
+            <span class="buget__text-span">18%</span> higher vs previous month
           </p>
         </div>
       </div>
-      <div class="second_card"></div>
+      <div class="second_card">
+        <div class="sup_text">
+          
+        </div>
+      </div>
       <div class="third_card"></div>
       <div class="fourth_card"></div>
     </div>
