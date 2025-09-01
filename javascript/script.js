@@ -49,6 +49,8 @@ var  movieTitle = 'WAR' ;
 
 const firstName =  'TEST' ;
 
+//NOTE TYPEOF operator used to check the datatype of the variable;
+
 console.log(typeof firstName) 
 
 const phoneNumber = 3424432 ;
@@ -64,4 +66,51 @@ console.log(typeof product);
 
 //NOTE Null
 let company = null;
-console.log(typeof company)
+console.log(typeof company);
+
+//TEMPLATE STRING , STRING INTERPOLATION ;
+
+const name = 'TEST' ;
+const age = 24 ;
+
+console.log('My Name is' + ' ' + name) ;
+console.log(`My name is ${name}             ${age}`)
+
+
+//NOTE OPERATORS => Operators and operands
+
+//NOTE AIRTHMATIC (- , + , % , * ,/ , **)
+console.log(5  +  5);
+console.log(5 - 5) ;
+console.log( 5 * 5) ;
+console.log(5%2) ;
+console.log(4/2);
+console.log(4**4);
+//NOTE special case concating string with number gives string
+console.log('4' + 4) ;
+//NOTE substracting string from number gives number
+console.log('4' - 4) ;
+//NOTE 
+console.log(+'4') ;
+
+
+//NOTE ASSIGNMENT (= , += , -= , *= , /=)
+let x = 5 ;
+x += 5 ;
+console.log(x) ;
+// x = x + 5 ;
+
+//NOTE COMPARISON (== , === , !== , !=  , > , < , >= , <= ) ;
+    //NOTE LOOSE EQUALITY (==) value compare
+  console.log(10 == '10') ;
+    //NOTE STRICT EQUALITY (===) value and type;
+    console.log(10 === '10')
+    //NOTE LOOSE NOT EQUAL (!=) ;
+    console.log(10 != '10') ;
+    //NOTE STRICT 
+    console.log(10 !== '10') ;
+//NOTE LOGICAL (||  , && , !) ;
+
+//NOTE UNARY (++ , -- , ! ) ;
+
+
