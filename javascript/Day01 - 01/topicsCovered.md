@@ -1,0 +1,12 @@
+DATE = 1/09/25 --------------------------------------
+
+INTRO
+VARIABLES
+VARIABLES DECLARATION
+DATA TYPES
+OPERATORS
+TEMPLATE STRING 
+TYPE CONVERSION VS TYPE COERSION
+
+
+DATE = 1/09/25 --------------------------------------

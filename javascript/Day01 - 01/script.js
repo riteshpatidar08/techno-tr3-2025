@@ -128,8 +128,20 @@ let j = 10 ;
 console.log(j++) ;
 console.log(j);
 
-
 let k = 10 ;
 console.log(++k);
 console.log(k++);
 console.log(k++ + ++k);
+
+
+//NOTE TYPE CONVERSION AND TYPE COERSION;
+// TYPE CONVERSION => EXPLICIT CONVERSION.
+// TYPE COERSION => implicit  conversion.
+let number = '5' ;
+console.log(typeof Number(number));
+
+let isjsFun = 'true' ;
+console.log(typeof Boolean(isjsFun));
+
+let phoneNum = 5323223;
+console.log(typeof String(phoneNum));
