@@ -110,7 +110,26 @@ console.log(x) ;
     //NOTE STRICT 
     console.log(10 !== '10') ;
 //NOTE LOGICAL (||  , && , !) ;
+console.log(true || false);
+console.log(true && false) ;
+console.log(!false) ;
+
+// console.log(5 && 7);
 
 //NOTE UNARY (++ , -- , ! ) ;
+//INCREMENT++ 
+let b = 4 ;
+b-- ;
+console.log(b)
+
+// pre increment and postIncrement
+// j++ post => ++j pre
+let j = 10 ;
+console.log(j++) ;
+console.log(j);
 
 
+let k = 10 ;
+console.log(++k);
+console.log(k++);
+console.log(k++ + ++k);
