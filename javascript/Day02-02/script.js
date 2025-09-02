@@ -105,6 +105,7 @@ switch (action) {
 // if case is touch console.log(creating file)
 
 // switch(expession){
+
 //     case expression1:
 //     case expression2:
 //         codeblock
@@ -113,11 +114,60 @@ switch (action) {
 //     case ..
 // }
 
-const emoji =  'happy' ;
+const emoji = 'happy';
 
-switch(emoji){
-    case 'laugh' :
-    case 'happy' :
-        console.log('laugh and happy ')
+switch (emoji) {
+  case 'laugh':
+  case 'happy':
+    console.log('laugh and happy ');
 }
 
+
+//NOTE => NON PRIMTIVE (ARRAY , Object);
+const test = () => 'test fn'
+const jsArry = ['phone' , 0 , null , undefined , true, test];
+
+console.log(jsArry[0]);
+console.log(jsArry[jsArry.length - 1]());
+//array length 
+console.log(jsArry.length);
+console.log(typeof jsArry); //type of array is object
+
+//update a particular index ;
+jsArry[1] = 1 ;
+console.log(jsArry) ;
+
+//NON PRIMITIVE DATA OBJECT ***** 
+
+const details = {
+    firstName : 'TEST' ,
+    age : 20,
+    friends : ['test1','test2'],
+    address : {
+        pinCode : 302018 ,
+        city : 'Jaipur'
+    }
+};
+
+//access the value of individual properties
+// dot notation , bracket notation
+//NOTE DOT NOTATION ;
+console.log(details.firstName);
+console.log(details.age);
+// console.log(details.friends.length)
+console.log(details.friends[details.friends.length - 1])
+
+details.firstName = 'RITESH' ;
+console.log(details);
+
+//NOTE BRACKET NOTATION :
+const a = 'age'
+console.log(details[a]) ;
+// console.log(details.courses)
+
+//note create a function to check if a property exists on the object or not .
+// checkPropertyexist(propertyName , object);
+
+// // fucntion(){
+// obj[key] === undefined ? console.log('not exist') : 
+// // }
