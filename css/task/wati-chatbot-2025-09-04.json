@@ -1,0 +1,116 @@
+{
+  "id": "chatbot_1757004977652",
+  "tenantId": "465251",
+  "name": "Gas Booking Flow",
+  "created": "2025-09-04T16:56:17.652Z",
+  "lastUpdated": "2025-09-04T16:56:17.652Z",
+  "isDeleted": false,
+  "transform": {
+    "posX": "0",
+    "posY": "0",
+    "zoom": "1"
+  },
+  "isPro": false,
+  "channelTypes": [
+    "WA"
+  ],
+  "flowNodes": [
+    {
+      "flowReplies": [
+        {
+          "flowReplyType": "Text",
+          "data": "<p>Hi User, Welcome to siddhi vinayak, do you want book gas?</p>",
+          "caption": "",
+          "mimeType": ""
+        }
+      ],
+      "isStartNode": true,
+      "flowNodePosition": {
+        "posX": "13.812490203037555",
+        "posY": "30.233818472726284"
+      },
+      "id": "main_message-eYvcR",
+      "flowNodeType": "Message"
+    },
+    {
+      "interactiveButtonsHeader": {
+        "type": "Text",
+        "text": "Hi User",
+        "media": null
+      },
+      "interactiveButtonsBody": "<p>Welcome to siddhi vinayak, do you want to book gas?</p>",
+      "interactiveButtonsFooter": "",
+      "interactiveButtonsItems": [
+        {
+          "id": "VebvlfQ",
+          "buttonText": "yes",
+          "nodeResultId": "main_message-DvELq"
+        },
+        {
+          "id": "Dzobejh",
+          "buttonText": "no",
+          "nodeResultId": "main_message-DjvyH"
+        }
+      ],
+      "interactiveButtonsUserInputVariable": "",
+      "interactiveButtonsDefaultNodeResultId": "",
+      "flowNodePosition": {
+        "posX": "462.675630993645",
+        "posY": "49.08030840801388"
+      },
+      "id": "main_buttons-VlCpt",
+      "flowNodeType": "InteractiveButtons"
+    },
+    {
+      "flowReplies": [
+        {
+          "flowReplyType": "Text",
+          "data": "<p>Thank you for booking.</p>",
+          "caption": "",
+          "mimeType": ""
+        }
+      ],
+      "isStartNode": false,
+      "flowNodePosition": {
+        "posX": "210.07834167007752",
+        "posY": "366.86962532259804"
+      },
+      "id": "main_message-DvELq",
+      "flowNodeType": "Message"
+    },
+    {
+      "flowReplies": [
+        {
+          "flowReplyType": "Text",
+          "data": "<p>ok, Thanks.</p>",
+          "caption": "",
+          "mimeType": ""
+        }
+      ],
+      "isStartNode": false,
+      "flowNodePosition": {
+        "posX": "634.0500662693883",
+        "posY": "389.31278236212836"
+      },
+      "id": "main_message-DjvyH",
+      "flowNodeType": "Message"
+    }
+  ],
+  "flowEdges": [
+    {
+      "id": "reactflow__edge-main_message-eYvcR-main_buttons-VlCpt",
+      "sourceNodeId": "main_message-eYvcR",
+      "targetNodeId": "main_buttons-VlCpt"
+    },
+    {
+      "id": "reactflow__edge-main_buttons-VlCptVebvlfQ-main_message-DvELq",
+      "sourceNodeId": "main_buttons-VlCpt__VebvlfQ",
+      "targetNodeId": "main_message-DvELq"
+    },
+    {
+      "id": "reactflow__edge-main_buttons-VlCptDzobejh-main_message-DjvyH",
+      "sourceNodeId": "main_buttons-VlCpt__Dzobejh",
+      "targetNodeId": "main_message-DjvyH"
+    }
+  ]
+}

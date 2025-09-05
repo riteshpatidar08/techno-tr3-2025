@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "1757005827463",
+      "type": "message",
+      "position": {
+        "x": -406.11052709364736,
+        "y": 176.05471319907554
+      },
+      "data": {
+        "message": "New message...",
+        "messageType": "template",
+        "delay": 0,
+        "enableButtons": true,
+        "buttons": [
+          {
+            "text": "hi",
+            "type": "reply"
+          }
+        ]
+      },
+      "width": 200,
+      "height": 155,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -406.11052709364736,
+        "y": 176.05471319907554
+      }
+    }
+  ],
+  "edges": [],
+  "timestamp": "2025-09-04T17:10:57.618Z",
+  "stats": {
+    "totalNodes": 1,
+    "messageNodes": 1,
+    "inputNodes": 0,
+    "conditionNodes": 0,
+    "actionNodes": 0
+  }
+}

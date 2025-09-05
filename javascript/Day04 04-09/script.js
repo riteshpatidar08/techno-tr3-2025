@@ -123,3 +123,7 @@ const reduceOutput = arrNUm.reduce((acc,el)=>{
 
 },0)
  console.log(reduceOutput)
+
+ const cart = [{name : "SHIRT" , quantity : 3 , price : 100},{name : "Jeans" , quantity  : 2 , price : 1550}] ;
+//  totalCartValue?
+
