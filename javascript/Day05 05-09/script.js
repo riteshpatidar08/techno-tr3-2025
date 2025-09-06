@@ -135,7 +135,7 @@ console.log(price, name);
 
 const user = [
   { name: 'test', email: 'test@gmail.com', role: ['admin', 'user'] },
-  { name: 'test2', email: 'test2@gmail.com', role: ['superadmin' , 'admin'] },
+  { name: 'test2', email: 'test2@gmail.com', role: ['superadmin', 'admin'] },
 ];
 
 //access email and role(individual role into separate variable)
@@ -143,7 +143,7 @@ const user = [
 user.forEach((el) => {
   const { email, role } = el;
   console.log(email);
-//   console.log(role);
+  //   console.log(role);
   const [firstRole, secondRole] = role;
   console.log(firstRole, secondRole);
 });
