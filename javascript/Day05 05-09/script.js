@@ -147,3 +147,30 @@ user.forEach((el) => {
   const [firstRole, secondRole] = role;
   console.log(firstRole, secondRole);
 });
+
+
+
+//NOTE  Count the number of vowels in a string.
+//NOTE   Write a function to check if a string is a palindrome.
+//NOTE   From a string like "1,2,3,4", return the sum of numbers. 
+//NOTE   Remove falsy values (false, 0, "", null, undefined, NaN) from an array.  
+//NOTE remove duplicates from an array [1,2,2,3,4,5];
+
+
+//NOTE SOLVE QUESTIONS RELATED TO TYPE COERSION
+console.log([] + []);
+console.log({} + {}); 
+console.log([] + {} ) ;
+console.log({} + []);
+console.log(undefined + undefined) ;
+console.log(0 === false) ;
+console.log('5' * 2);
+console.log('4'/ 2);
+
+
+//NOTE  convert a snake_case string to camelCase
+//NOTE we can accept index by passing second paramter.
+const arrr = [1,2,3,4];
+arrr.map((el,index)=>{
+    console.log(el,index)
+})
