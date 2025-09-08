@@ -1,0 +1,65 @@
+{
+  "chatbotName": "Demo Chatbot",
+  "nodes": [
+    {
+      "id": "message-mf8fpf8r",
+      "type": "message",
+      "position": {
+        "x": 202.39855932299736,
+        "y": 322.54940196626023
+      },
+      "data": {
+        "flowReplies": [
+          {
+            "flowReplyType": "Text",
+            "data": "<p>Hello! How can I help you today?</p>"
+          }
+        ],
+        "isStartNode": false
+      },
+      "width": 280,
+      "height": 167,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 202.39855932299736,
+        "y": 322.54940196626023
+      },
+      "dragging": false
+    },
+    {
+      "id": "question-mf8fpj95",
+      "type": "question",
+      "position": {
+        "x": 586.5850314247098,
+        "y": 592.7728699140508
+      },
+      "data": {
+        "questionText": "How can we help you?",
+        "answerOptions": [
+          {
+            "id": "sales",
+            "text": "Sales"
+          },
+          {
+            "id": "support",
+            "text": "Support"
+          },
+          {
+            "id": "general",
+            "text": "General"
+          }
+        ]
+      },
+      "width": 220,
+      "height": 239,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 586.5850314247098,
+        "y": 592.7728699140508
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [],
+  "timestamp": "2025-09-06T15:45:23.126Z"
+}

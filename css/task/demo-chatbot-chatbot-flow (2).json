@@ -1,0 +1,199 @@
+{
+  "chatbotName": "Demo Chatbot",
+  "nodes": [
+    {
+      "id": "message-mf8g6xxk",
+      "type": "message",
+      "position": {
+        "x": 765,
+        "y": 405
+      },
+      "data": {
+        "flowReplies": [
+          {
+            "flowReplyType": "Text",
+            "data": "<p>Hello! How can I help you today?</p>"
+          }
+        ],
+        "isStartNode": false
+      },
+      "width": 280,
+      "height": 167,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 765,
+        "y": 405
+      },
+      "dragging": false
+    },
+    {
+      "id": "message-mf8g6yd6",
+      "type": "message",
+      "position": {
+        "x": 30,
+        "y": 300
+      },
+      "data": {
+        "flowReplies": [
+          {
+            "flowReplyType": "Video",
+            "data": "<p>Hello! How can I help you today?</p>"
+          }
+        ],
+        "isStartNode": false
+      },
+      "width": 280,
+      "height": 167,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 30,
+        "y": 300
+      }
+    },
+    {
+      "id": "question-mf8g82ls",
+      "type": "question",
+      "position": {
+        "x": 135,
+        "y": -105
+      },
+      "data": {
+        "questionText": "How can we help you?",
+        "answerOptions": [
+          {
+            "id": "sales",
+            "text": "Sales"
+          },
+          {
+            "id": "support",
+            "text": "Support"
+          },
+          {
+            "id": "general",
+            "text": "General"
+          }
+        ]
+      },
+      "width": 220,
+      "height": 239,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 135,
+        "y": -105
+      },
+      "dragging": false
+    },
+    {
+      "id": "buttons-mf8g8cpa",
+      "type": "buttons",
+      "position": {
+        "x": 540,
+        "y": 45
+      },
+      "data": {
+        "buttonsText": "Choose an option",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Option 1"
+          },
+          {
+            "id": "option2",
+            "text": "Option 2"
+          }
+        ]
+      },
+      "width": 220,
+      "height": 198,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 540,
+        "y": 45
+      },
+      "dragging": false
+    },
+    {
+      "id": "condition-mf8gcd91",
+      "type": "condition",
+      "position": {
+        "x": 255,
+        "y": 600
+      },
+      "data": {
+        "conditions": []
+      },
+      "width": 280,
+      "height": 139,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 255,
+        "y": 600
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-message-mf8g6yd6-message-mf8g6xxk",
+      "source": "message-mf8g6yd6",
+      "sourceHandle": null,
+      "target": "message-mf8g6xxk",
+      "targetHandle": null,
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-buttons-mf8g8cpa-question-mf8g82ls",
+      "source": "buttons-mf8g8cpa",
+      "sourceHandle": "option1",
+      "target": "question-mf8g82ls",
+      "targetHandle": "sales",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-buttons-mf8g8cpa-question-mf8g82ls",
+      "source": "buttons-mf8g8cpa",
+      "sourceHandle": "option2",
+      "target": "question-mf8g82ls",
+      "targetHandle": "support",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-question-mf8g82ls-message-mf8g6yd6",
+      "source": "question-mf8g82ls",
+      "sourceHandle": "general",
+      "target": "message-mf8g6yd6",
+      "targetHandle": null,
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-buttons-mf8g8cpa-condition-mf8gcd91",
+      "source": "buttons-mf8g8cpa",
+      "sourceHandle": "option2",
+      "target": "condition-mf8gcd91",
+      "targetHandle": null,
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    }
+  ],
+  "timestamp": "2025-09-06T16:02:19.854Z"
+}

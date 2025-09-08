@@ -1,0 +1,209 @@
+{
+  "chatbotName": "Demo Chatbot",
+  "nodes": [
+    {
+      "id": "message-mf9aqdfx",
+      "type": "message",
+      "position": {
+        "x": 165,
+        "y": -120
+      },
+      "data": {
+        "flowReplies": [
+          {
+            "flowReplyType": "Text",
+            "data": "<p>Hello! How can Welcome to Mario's Pizza! 👋 Hi {{name}}, I'm here to help you place your order. What would you like to do today?\"I help you today?</p>"
+          }
+        ],
+        "isStartNode": true
+      },
+      "width": 320,
+      "height": 215,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 165,
+        "y": -120
+      },
+      "dragging": false
+    },
+    {
+      "id": "question-mf9b1251",
+      "type": "question",
+      "position": {
+        "x": 390,
+        "y": 270
+      },
+      "data": {
+        "questionText": "How can I help you today?",
+        "answerOptions": [
+          {
+            "id": "sales",
+            "text": "Place an order"
+          },
+          {
+            "id": "support",
+            "text": "View Menu"
+          },
+          {
+            "id": "general",
+            "text": "Store Hours"
+          },
+          {
+            "id": "opt_1757226116249",
+            "text": "Contact Info"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 292,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 390,
+        "y": 270
+      }
+    },
+    {
+      "id": "buttons-mf9b3g4z",
+      "type": "buttons",
+      "position": {
+        "x": 705,
+        "y": -180
+      },
+      "data": {
+        "buttonsText": "What would you like to order?",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Pizza"
+          },
+          {
+            "id": "option2",
+            "text": "Pasta"
+          },
+          {
+            "id": "btn_1757226209060",
+            "text": "Salads"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 268,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 705,
+        "y": -180
+      }
+    },
+    {
+      "id": "question-mf9b4qvy",
+      "type": "question",
+      "position": {
+        "x": 885,
+        "y": 255
+      },
+      "data": {
+        "questionText": "Which Pizza Would You like ?",
+        "answerOptions": [
+          {
+            "id": "sales",
+            "text": "Margherita - $12"
+          },
+          {
+            "id": "opt_1757226318754",
+            "text": "Pepperoni - $14"
+          },
+          {
+            "id": "opt_1757226329188",
+            "text": "Supreme - $16"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 268,
+      "selected": true,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 885,
+        "y": 255
+      }
+    },
+    {
+      "id": "buttons-mf9b8hzj",
+      "type": "buttons",
+      "position": {
+        "x": 1245,
+        "y": 30
+      },
+      "data": {
+        "buttonsText": "What Size Pizza?",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Small"
+          },
+          {
+            "id": "option2",
+            "text": "Medium"
+          },
+          {
+            "id": "btn_1757226445007",
+            "text": "Large"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 268,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1245,
+        "y": 30
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-message-mf9aqdfx-question-mf9b1251",
+      "source": "message-mf9aqdfx",
+      "target": "question-mf9b1251",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-question-mf9b1251-buttons-mf9b3g4z",
+      "source": "question-mf9b1251",
+      "target": "buttons-mf9b3g4z",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-buttons-mf9b3g4z-question-mf9b4qvy",
+      "source": "buttons-mf9b3g4z",
+      "target": "question-mf9b4qvy",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-buttons-mf9b3g4z-buttons-mf9b8hzj",
+      "source": "buttons-mf9b3g4z",
+      "target": "buttons-mf9b8hzj",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    }
+  ],
+  "timestamp": "2025-09-07T06:28:15.381Z"
+}

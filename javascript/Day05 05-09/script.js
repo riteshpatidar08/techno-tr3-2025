@@ -167,7 +167,7 @@ console.log(0 === false) ;
 console.log('5' * 2);
 console.log('4'/ 2);
 
-
+//NOTE POINT TO REMEMBER WHEN WE USE + VALUES CONVERT TO STRING [] => '' , {} => [object Object];
 //NOTE  convert a snake_case string to camelCase
 //NOTE we can accept index by passing second paramter.
 const arrr = [1,2,3,4];

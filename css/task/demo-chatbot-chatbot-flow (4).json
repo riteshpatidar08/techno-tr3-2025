@@ -1,0 +1,193 @@
+{
+  "chatbotName": "Demo Chatbot",
+  "nodes": [
+    {
+      "id": "message-mf9jukka",
+      "type": "message",
+      "position": {
+        "x": -120,
+        "y": 135
+      },
+      "data": {
+        "flowReplies": [
+          {
+            "flowReplyType": "Text",
+            "data": "<p>Hello! How can I help you today?</p>"
+          }
+        ],
+        "isStartNode": true
+      },
+      "width": 320,
+      "height": 211,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -120,
+        "y": 135
+      }
+    },
+    {
+      "id": "question-mf9jvmsz",
+      "type": "question",
+      "position": {
+        "x": -270,
+        "y": 600
+      },
+      "data": {
+        "questionText": "How can we help you?",
+        "answerOptions": [
+          {
+            "id": "sales",
+            "text": "Sales"
+          },
+          {
+            "id": "support",
+            "text": "Support"
+          },
+          {
+            "id": "general",
+            "text": "General"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 268,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -270,
+        "y": 600
+      }
+    },
+    {
+      "id": "buttons-mf9jvzbs",
+      "type": "buttons",
+      "position": {
+        "x": 315,
+        "y": 405
+      },
+      "data": {
+        "buttonsText": "Choose an option",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Option 1"
+          },
+          {
+            "id": "option2",
+            "text": "Option 2"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 222,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 315,
+        "y": 405
+      },
+      "dragging": false
+    },
+    {
+      "id": "buttons-mf9jwqc1",
+      "type": "buttons",
+      "position": {
+        "x": 390,
+        "y": 690
+      },
+      "data": {
+        "buttonsText": "Choose an option",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Option 1"
+          },
+          {
+            "id": "option2",
+            "text": "Option 2"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 222,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 390,
+        "y": 690
+      },
+      "dragging": false
+    },
+    {
+      "id": "buttons-mf9jwzoe",
+      "type": "buttons",
+      "position": {
+        "x": 135,
+        "y": 300
+      },
+      "data": {
+        "buttonsText": "Choose an option",
+        "buttons": [
+          {
+            "id": "option1",
+            "text": "Option 1"
+          },
+          {
+            "id": "option2",
+            "text": "Option 2"
+          }
+        ]
+      },
+      "width": 280,
+      "height": 222,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 135,
+        "y": 300
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "reactflow__edge-message-mf9jukka-question-mf9jvmsz",
+      "source": "message-mf9jukka",
+      "target": "question-mf9jvmsz",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-question-mf9jvmsz-buttons-mf9jvzbs",
+      "source": "question-mf9jvmsz",
+      "target": "buttons-mf9jvzbs",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-question-mf9jvmsz-buttons-mf9jwqc1",
+      "source": "question-mf9jvmsz",
+      "target": "buttons-mf9jwqc1",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "reactflow__edge-question-mf9jvmsz-buttons-mf9jwzoe",
+      "source": "question-mf9jvmsz",
+      "target": "buttons-mf9jwzoe",
+      "animated": true,
+      "style": {
+        "stroke": "#6366f1",
+        "strokeWidth": 2
+      }
+    }
+  ],
+  "timestamp": "2025-09-07T10:30:43.777Z"
+}
