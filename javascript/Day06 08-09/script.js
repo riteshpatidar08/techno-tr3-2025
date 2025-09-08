@@ -142,3 +142,32 @@ console.log(Math.floor((Math.random()*10)+1));
 
 
 //NOTE DATE METHODS :
+
+//to create a new data using Date ;
+const date = new Date();
+console.log(date);
+
+const getMonth = date.getMonth() 
+// (0-11) ;
+console.log(getMonth + 1)
+console.log(date.getDate());
+console.log(date.getMinutes());
+console.log(date.getFullYear());
+console.log(date.getSeconds());
+
+//manually generate data and time ;
+const newDate = new Date(2027,8,8,5,30,20) ;
+console.log(newDate) ;
+//formatting 
+console.log(newDate.toDateString());
+console.log(newDate.toTimeString());
+
+//NOTE TIMESTAMP 
+const timeStamp = Date.now() ;
+console.log(timeStamp) ; //epoch timestamp
+//conversion of the epoch timestamp to the normal date and time string ;
+const timeAndDate = new Date(timeStamp);
+console.log(timeAndDate);
+console.log(timeAndDate.setMonth(4));
+//try set function for all the minutes , year , sec , day 
+console.log(timeAndDate)
