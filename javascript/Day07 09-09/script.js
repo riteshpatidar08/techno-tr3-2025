@@ -88,3 +88,37 @@ console.log(headingFirst) ;
 //NOTE Returns the first element which matched the selector you have passed in the method
 const newPara = document.querySelector('.para')
 console.log(newPara);
+
+//NOTE querySelectorAll ;
+//NOTE returns nodelist 
+const newParaUsingQuerySelectAll = document.querySelectorAll('.para')
+console.log(newParaUsingQuerySelectAll);
+//we can directly loop the nodelist using forEach 
+newParaUsingQuerySelectAll.forEach((el)=>{
+    console.log(el)
+})
+
+//NOTE READING THE CONTENT AND UPDATE :
+console.log(document.body.textContent)
+console.log(document.body.innerText)
+console.log(document.body.innerHTML)
+
+const container = document.getElementById('container');
+console.log(container)
+console.log(container.innerText)
+console.log(container.textContent)
+console.log(container.innerHTML)
+
+//NOTE changing the inner html of the div using innerHtml propertry , replace all the existing html
+container.innerHTML = `<span>hello</span>`
+// container.innerText = `<span>hello</span>`❌
+//NOTE only use textContent and innerText to insert text specific data not html tags for html tags only use innerHTML
+
+//NOTE NEXT UPDATING HREF IN ANCHOR TAG :
+const anchorLink = document.getElementById('link');
+//NOTE change href ;
+console.dir(anchorLink)
+anchorLink.href = 'https://www.blinkit.in'
+anchorLink.innerText= 'Blinkit'
+
+//NOTE change the src in the image next
