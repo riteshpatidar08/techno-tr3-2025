@@ -172,11 +172,10 @@ console.log(timeAndDate.setMonth(4));
 //try set function for all the minutes , year , sec , day
 console.log(timeAndDate);
 
-//SCOPES : GLOBAL , BLOCK , FUNCTION SCOPE :
-
+//NOTE SCOPES : GLOBAL , BLOCK , FUNCTION SCOPE :
 const lastName = 'test';
 if (true) {
-  console.log(lastName);
+  console.log( lastName);
 }
 function test2() {
   console.log(lastName);
