@@ -122,3 +122,7 @@ anchorLink.href = 'https://www.blinkit.in'
 anchorLink.innerText= 'Blinkit'
 
 //NOTE change the src in the image next
+//NOTE next use an input tag then access the input value now use value attribute for static value; 
+const firstNamee = document.getElementById('name');
+console.log(firstNamee.value)
+// use variableName.value
