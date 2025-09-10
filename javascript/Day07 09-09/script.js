@@ -126,3 +126,7 @@ anchorLink.innerText= 'Blinkit'
 const firstNamee = document.getElementById('name');
 console.log(firstNamee.value)
 // use variableName.value
+
+//NOTE INNERHTML < INNERTEXT < TEXTCONTENT ?
+
+
