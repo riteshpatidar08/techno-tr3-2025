@@ -95,6 +95,17 @@ function buttonClick() {
 const btn = document.getElementById('btn');
 console.log(btn.onclick);
 
-btn.onclick = function(){
-    console.log('runnnning.........')
-}
+//NOTE we cannot add multiple functions on the inline events
+btn.onclick = function () {
+  console.log('runnnning.........');
+};
+
+//INLINE EVENTS USED INSIDE THE OPENING TAG LIST :
+
+//MOUSE EVENTS //onclick , ondblclick , onmouseenter , onmouseleave , onmouseup ;
+
+//keyboard events //keypress , keydown , keyup
+
+//form event //onchange , oninput , onfocus , onsubmit , onblur
+
+//NOTE ALTERNATIVE METHOD FOR ADDING EVENTS(prefer this instead of inline in js) :
