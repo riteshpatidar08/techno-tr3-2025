@@ -100,12 +100,56 @@ btn.onclick = function () {
   console.log('runnnning.........');
 };
 
-//INLINE EVENTS USED INSIDE THE OPENING TAG LIST :
+//NOTE INLINE EVENTS USED INSIDE THE OPENING TAG LIST :
 
-//MOUSE EVENTS //onclick , ondblclick , onmouseenter , onmouseleave , onmouseup ;
+//NOTE MOUSE EVENTS //onclick , ondblclick , onmouseenter , onmouseleave , onmouseup ;
 
-//keyboard events //keypress , keydown , keyup
+//NOTE keyboard events //keypress , keydown , keyup
 
-//form event //onchange , oninput , onfocus , onsubmit , onblur
+//NOTE form event //onchange , oninput , onfocus , onsubmit , onblur
 
 //NOTE ALTERNATIVE METHOD FOR ADDING EVENTS(prefer this instead of inline in js) :
+
+const button = document.getElementById('event_btn');
+//we can attach multiple event listerner for a single element
+// button.addEventListener('click' , ()=>{
+//     console.log('add event listerner is running')
+// })
+
+// button.addEventListener('click' , ()=>{
+//     console.log('another click event')
+// })
+//MOUSE EVENTS=> click , dblclick , mouseenter , mouseleave
+
+//FORM EVENTS :
+
+//NOTE FOCUS :
+const firstname = document.getElementById('firstname');
+console.log(firstname);
+
+firstname.addEventListener('focus', function () {
+  console.log('input is focused');
+  //this point to the element itself where the event is attached
+  this.style.border = '2px solid red';
+  this.style.outline = 'none';
+});
+
+//blur add attribute => disabled
+
+// firstname.addEventListener('blur', function(){
+//     this.setAttribute('disabled', '')
+//     console.log('blur is running')
+//     this.style.border= '1px solid gray'
+//     this.setAttribute('placeholder', 'field is disabled')
+// })
+
+//input
+firstname.addEventListener('input', function (event) {
+  console.log(event.target.value);
+  const key = event.target.name; //extracting vlaue of name attribute used in the firstname input field
+  const data = {
+    [key]: event.target.value,
+  };
+  console.log(data);
+  //    console.log(this.value)
+});
