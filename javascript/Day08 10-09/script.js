@@ -146,7 +146,7 @@ firstname.addEventListener('focus', function () {
 //input
 firstname.addEventListener('input', function (event) {
   console.log(event.target.value);
-  const key = event.target.name; //extracting vlaue of name attribute used in the firstname input field
+  const key = event.target.name; //extracting vlaue of name attribute used in the firstname input field.
   const data = {
     [key]: event.target.value,
   };
