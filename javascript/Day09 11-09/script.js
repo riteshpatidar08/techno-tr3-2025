@@ -100,4 +100,21 @@ promise
 
 const result = fetch('https://jsonplaceholder.typicode.com/todos');
 
-result.then((response) => response.json()).then((data) => console.log(data));
+result
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    data.forEach((el) => {
+      const h1 = document.createElement('h1');
+      h1.textContent = el.title;
+      const h4 = document.createElement('h4');
+      h4.textContent = el.completed;
+      if (el.completed) {
+        h4.style.backgroundColor = 'green';
+      } else {
+        h4.style.backgroundColor = 'red';
+      }
+      document.body.appendChild(h1);
+      document.body.appendChild(h4);
+    });
+  });
