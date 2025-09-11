@@ -31,8 +31,16 @@ form.addEventListener('submit', (event) => {
   console.log(data);
 });
 
+const btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  if (document.body.classList.contains('dark')) {
+    btn.textContent = 'Light';
+  } else {
+    btn.textContent = 'Dark';
+  }
+});
 
-const btn  = document.getElementById('btn');
-btn.addEventListener('click', ()=>{
-    document.body.classList.toggle('dark')
-})
+//Note create a drop down using js , dropdown should be open when i enter the mouse on it.
+//Note create a modal using js.
+//Note create a dark and light theme card ui.
