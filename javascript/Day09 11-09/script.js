@@ -118,3 +118,12 @@ result
       document.body.appendChild(h4);
     });
   });
+
+//data fetching
+
+fetch('https://randomuser.me/api/')
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+//handle the  states of the promise
+
