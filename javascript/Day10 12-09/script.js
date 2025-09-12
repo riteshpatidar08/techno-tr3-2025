@@ -107,6 +107,7 @@ console.log('rahul', Rahul);
 console.log(Aman);
 console.log(Aman.intro());
 
+//every object have a hidden property called prototype which is shared across all the instances of the object like the object directly inherits method and properties from the propotype if it not avaialbe on the current object 
 Student.prototype.test = function () {
   console.log(
     'this is test set on prototype which going to share for each student instance'
@@ -125,3 +126,15 @@ Array.prototype.hi = function(){
 
 }
 console.log([1,2,3].hi())
+
+
+const obj2 = {
+    age : '24'
+}
+//we can use the __proto__ property to directly set the prototpye  property to any  reference object 
+const obj1 = {
+    firstname : 'test',
+    __proto__ : obj2
+}
+console.log(obj1)
+console.log(obj1.age)
