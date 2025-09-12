@@ -117,3 +117,11 @@ Aman.test();
 Rahul.test();
 // const newarr = new Array(1,2,3);
 // console.log(newarr)
+
+
+//adding a new method on the array prototype
+Array.prototype.hi = function(){
+    console.log('this is random method hi');
+
+}
+console.log([1,2,3].hi())
