@@ -102,5 +102,18 @@ function Student(name, rollNo, department) {
 }
 
 const Aman = new Student('Aman', '3424cs', 'CSE');
+const Rahul = new Student('Rahul', '4323', 'CSE');
+console.log('rahul', Rahul);
 console.log(Aman);
 console.log(Aman.intro());
+
+Student.prototype.test = function () {
+  console.log(
+    'this is test set on prototype which going to share for each student instance'
+  );
+};
+
+Aman.test();
+Rahul.test();
+// const newarr = new Array(1,2,3);
+// console.log(newarr)
