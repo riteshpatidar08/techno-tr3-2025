@@ -107,7 +107,7 @@ console.log('rahul', Rahul);
 console.log(Aman);
 console.log(Aman.intro());
 
-//every object have a hidden property called prototype which is shared across all the instances of the object like the object directly inherits method and properties from the propotype if it not avaialbe on the current object 
+//every object have a hidden property called prototype which is shared across all the instances of the object like the object directly inherits method and properties from the propotype if it not avaialbe on the current object
 Student.prototype.test = function () {
   console.log(
     'this is test set on prototype which going to share for each student instance'
@@ -119,22 +119,45 @@ Rahul.test();
 // const newarr = new Array(1,2,3);
 // console.log(newarr)
 
-
 //adding a new method on the array prototype
-Array.prototype.hi = function(){
-    console.log('this is random method hi');
-
-}
-console.log([1,2,3].hi())
-
+Array.prototype.hi = function () {
+  console.log('this is random method hi');
+};
+console.log([1, 2, 3].hi());
 
 const obj2 = {
-    age : '24'
-}
-//we can use the __proto__ property to directly set the prototpye  property to any  reference object 
+  age: '24',
+};
+//we can use the __proto__ property to directly set the prototpye  property to any  reference object
 const obj1 = {
-    firstname : 'test',
-    __proto__ : obj2
+  firstname: 'test',
+  __proto__: obj2,
+};
+console.log(obj1);
+console.log(obj1.age);
+
+//ES6 CLASSES
+
+class Person1 {
+  constructor(name, age) {
+    (this.name = name), (this.age = age);
+  }
 }
-console.log(obj1)
-console.log(obj1.age)
+
+const Ram = new Person1('Ram', '34');
+console.log(Ram);
+
+//new updated object literal
+const firstname = 'ritesh';
+
+const obj3 = {
+  firstname, //if key and value have same name we can use directly
+  intro: function () {
+    console.log(this.firstname);
+  },
+  intro1() {
+    console.log(this.firstname);
+  }, //new way of writing method in the object
+};
+
+console.log(obj3);
