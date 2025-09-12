@@ -56,8 +56,7 @@ function generateSquare(side) {
 
 generateSquare(side);
 
-//side value =>
-
+//NOTE what it looks in the oops encapsulation
 const obj = {
   side: 4,
   generateSquare: function () {
@@ -65,14 +64,43 @@ const obj = {
   },
 };
 
-//factory function 
-function genrateNewsquare(side){
-return {
-    side : side ,
+//factory function
+function genrateNewsquare(side) {
+  return {
+    side: side,
     generateSquare: function () {
-        console.log(`square has ${this.side}`);
-      },
+      console.log(`square has ${this.side}`);
+    },
+  };
 }
+console.log(genrateNewsquare(1));
+console.log(genrateNewsquare(2));
+
+//NOTE CONSTRUCTOR FUNCTION :
+
+//NOTE -
+
+function Person(firstName) {
+  console.log(this);
+  this.firstName = firstName;
 }
-console.log(genrateNewsquare(1))
-console.log(genrateNewsquare(2))
+const test = new Person('test');
+console.log(test);
+// {firstname : 'ritesh'}
+// {firstname : 'test'}
+
+//NOTE TASK CREATE A STUDENT CONSTRUCTOR FUNCTION TAKES (NAME , rollNO and department create a method intro to console.log('my name is test , roll no 234 and department is csE)
+function Student(name, rollNo, department) {
+  this.name = name;
+  this.rollNo = rollNo;
+  this.department = department;
+  this.intro = function () {
+    console.log(
+      `my name is ${this.name} roll no ${this.rollNo} departement ${this.department}`
+    );
+  };
+}
+
+const Aman = new Student('Aman', '3424cs', 'CSE');
+console.log(Aman);
+console.log(Aman.intro());
