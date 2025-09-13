@@ -82,6 +82,10 @@ class RandomUser {
   constructor(name) {
     this.name = name;
   }
+  //defining static method in the class 
+  static runOnClass(){
+    console.log('hello')
+  }
   get getname() {
     return this.name.split(' ').reverse().join(' ');
   }
@@ -96,5 +100,13 @@ class RandomUser {
 
 const test = new RandomUser('TEST KUMAR');
 console.log(test);
-test.setname = 'KUMAR TEST'
-console.log(test.getname); //to access the exsting property call as a property getter method
+test.setname = 'KUMAR TEST';
+console.log(test.getname); //to access the exsting property call as a property getter method.
+
+//static method calling
+console.log(RandomUser.runOnClass())
+
+
+
+//INSTANCE METHOD , STATIC METHOD :
+
