@@ -71,23 +71,30 @@ console.log(movies.addmovie({ id: 1, name: 'batman', year: 2008 }));
 console.log(movies.deleteMovie(1));
 console.log(movies.getmovie());
 
-
-//GETTERS AND SETTERS : 
+//GETTERS AND SETTERS :
 
 //getters => read operation
 //setter => write operation
 
 //both are defined like method but we call both as a property;
 
-class RandomUser{
-    constructor(name){
-        this.name = name ;
+class RandomUser {
+  constructor(name) {
+    this.name = name;
+  }
+  get getname() {
+    return this.name.split(' ').reverse().join(' ');
+  }
+  set setname(name) {
+    if (name.length > 5) {
+      this.name = name;
+    } else {
+      console.log('please enter name longer that 5 character');
     }
-    get getname(){
-        return this.name.split(' ').reverse().join(' ')
-    }
+  }
 }
 
 const test = new RandomUser('TEST KUMAR');
-console.log(test)
-console.log(test.getname) //to access the exsting property call as a property getter method
+console.log(test);
+test.setname = 'KUMAR TEST'
+console.log(test.getname); //to access the exsting property call as a property getter method
