@@ -151,9 +151,10 @@ console.log(Ram);
 
 //new updated object literal
 const firstname = 'ritesh';
-
+const target = 'name' ;
 const obj3 = {
   firstname, //if key and value have same name we can use directly.
+ [target] : 'test',
   intro: function () {
     console.log(this.firstname);
   },
