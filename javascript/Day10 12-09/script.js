@@ -107,7 +107,7 @@ console.log('rahul', Rahul);
 console.log(Aman);
 console.log(Aman.intro());
 
-//every object have a hidden property called prototype which is shared across all the instances of the object like the object directly inherits method and properties from the propotype if it not avaialbe on the current object
+//NOTE Every object have a hidden property called [[Prototype]] which is shared across all the instances of the object like the object directly inherits method and properties from the propotype if it not avaialbe on the current object
 
 Student.prototype.test = function () {
   console.log(

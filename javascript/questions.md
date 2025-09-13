@@ -17,6 +17,8 @@ hoisting ?
 this keyword ?
 window object ?
 array methods ?
+array method mutates original array ?
+diffrence between slice and splice ?
 diffrence between forEach and map , find and filter , higher order methods
 callback function
 higher order function
@@ -39,7 +41,14 @@ diffrence betweeen htmlcollection and nodelist ?
 what is dom  ?
 events in the js ? 
 basic form event ? 
-diffrence between let , const and var 
+diffrence between let , const and var ?
+Search for type ceorsion tricky questions and try to solve ?
+Update way of writing object (object literal)
+
+Es6 version features list ------------------------------
+let , const 
+spread operator , destruturing 
+promises , async await , es6 classes  , default paramters , arrow functions , modules(cover in the starting of the react)
 
 
 
