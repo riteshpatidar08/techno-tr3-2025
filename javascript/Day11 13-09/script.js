@@ -147,3 +147,9 @@ fn()
 //NOTE PARSEINT AND PARSEFLOAT (REMAINING NUMBER METHODS)
 console.log(parseInt('234jef'))
 console.log(parseFloat('3.23'))
+
+
+// (IIFE)IMMEDIATELY INVOcKED FUNCTION EXPRESSION
+(function(){
+  console.log('this is iife')
+})() ;
