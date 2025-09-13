@@ -62,6 +62,7 @@ class Movies {
   deleteMovie(id) {
     const index = this.#movies.findIndex((movie) => movie.id === id);
     this.#movies.splice(index, 1);
+    console.log(`movie with ${id} deleted successfully`);
   }
 }
 
@@ -82,9 +83,9 @@ class RandomUser {
   constructor(name) {
     this.name = name;
   }
-  //defining static method in the class 
-  static runOnClass(){
-    console.log('hello')
+  //defining static method in the class
+  static runOnClass() {
+    console.log('hello');
   }
   get getname() {
     return this.name.split(' ').reverse().join(' ');
@@ -104,9 +105,45 @@ test.setname = 'KUMAR TEST';
 console.log(test.getname); //to access the exsting property call as a property getter method.
 
 //static method calling
-console.log(RandomUser.runOnClass())
-
-
+console.log(RandomUser.runOnClass());
 
 //INSTANCE METHOD , STATIC METHOD :
 
+//NOTE FUNCTION METHODS CALL , APPLY , BIND
+const details = {
+  firstname: 'RAHUL',
+};
+
+function demo(id) {
+  console.log(`this is the demo account for ${this.firstname} with ${id} id`);
+}
+// demo.call(details,1) //set this keyword on any specific object;
+// demo.apply(details, [1])
+// const output = demo.bind(details, [1]);
+// output()
+
+//NOTE SCOPE CHAINING
+function outer() {
+  const a = 5;
+  function inner() {
+    function innernested() {
+      console.log(a);
+    }
+    innernested();
+  }
+  inner();
+}
+outer()
+//NOTE CLOSURES
+
+function newdemo(){
+    const a = 5 ;
+    return function(){
+        console.log(a)
+    }
+}
+const fn = newdemo()
+fn()
+//NOTE PARSEINT AND PARSEFLOAT (REMAINING NUMBER METHODS)
+console.log(parseInt('234jef'))
+console.log(parseFloat('3.23'))
