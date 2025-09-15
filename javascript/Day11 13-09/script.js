@@ -2,7 +2,7 @@
 
 //1way class declaration
 
-//first you have to use a prebuilt constructor function is going to be called automatically to createa a new instance of the class when you called it using new keyword
+//NOTE first you have to use a prebuilt constructor function is going to be called automatically to createa a new instance of the class when you called it using new keyword
 class Person {
   #age;
   constructor(name, age) {
@@ -16,8 +16,8 @@ class Person {
     console.log(this.#age);
   }
 }
-//es6 classes sets all the method directly on the [[PROTOTYPE]]
-// property of the constructor function from which the instances created ,
+//NOTE es6 classes sets all the method directly on the [[PROTOTYPE]]
+//NOTE  property of the constructor function from which the instances created ,
 const rahul = new Person('rahul', 24);
 const ram = new Person('ram');
 // console.log(rahul.#age);
@@ -72,12 +72,12 @@ console.log(movies.addmovie({ id: 1, name: 'batman', year: 2008 }));
 console.log(movies.deleteMovie(1));
 console.log(movies.getmovie());
 
-//GETTERS AND SETTERS :
+//NOTE GETTERS AND SETTERS :
 
 //getters => read operation
 //setter => write operation
 
-//both are defined like method but we call both as a property;
+//NOTE both are defined like method but we call both as a property;
 
 class RandomUser {
   constructor(name) {
@@ -102,12 +102,12 @@ class RandomUser {
 const test = new RandomUser('TEST KUMAR');
 console.log(test);
 test.setname = 'KUMAR TEST';
-console.log(test.getname); //to access the exsting property call as a property getter method.
+console.log(test.getname); //NOTE to access the exsting property call as a property getter method.
 
-//static method calling
+//NOTE static method calling
 console.log(RandomUser.runOnClass());
 
-//INSTANCE METHOD , STATIC METHOD :
+//NOTE INSTANCE METHOD , STATIC METHOD :
 
 //NOTE FUNCTION METHODS CALL , APPLY , BIND
 const details = {
@@ -149,7 +149,12 @@ console.log(parseInt('234jef'))
 console.log(parseFloat('3.23'))
 
 
-// (IIFE)IMMEDIATELY INVOcKED FUNCTION EXPRESSION
+//NOTE (IIFE)IMMEDIATELY INVOcKED FUNCTION EXPRESSION
 (function(){
   console.log('this is iife')
 })() ;
+
+
+
+
+//NOTE  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
